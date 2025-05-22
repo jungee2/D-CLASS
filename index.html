@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>디클래스 | 매일매일 골라듣는 데일리 클래스</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- 스와이퍼 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- AOS 라이브러리 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 폰트어썸 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- 내 스크립트 -->
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <section class="top_bar">
+            <div class="top_logo">
+                <a href="#">
+                    <img src="img/top_logo.png" alt="top_logo">
+                </a>
+            </div>
+
+            <div class="top_search">
+                <div class="search_content">
+                    <input type="text" class="search_input" placeholder="관심있는 분야가 있나요?">
+                    <img class="search_btn" src="img/search_icon.png" alt="search">
+                </div>
+            </div>
+
+            <div class="top_my">
+                <a href="#">로그인</a>
+                <span> | </span>
+                <a href="#">클래스 문의</a>
+            </div>
+
+            <!-- 모바일 햄버거 메뉴 -->
+            <div class="m_hamburger_btn">
+                <img src="img/mobile_menu.png" alt="login">
+            </div>
+
+            <div class="m_menu">
+                <div class="m_menu_box">
+                    <button class="m_menu_close">✕</button>
+
+                    <div class="m_login">
+                        <a href="#">로그인</a>
+                        <span> | </span>
+                        <a href="#">클래스 문의</a>
+                    </div>
+
+                    <nav class="m_main_menu">
+                        <ul class="m_main_menu_content">
+                            <li class="always_active">
+                                <a href="#">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu_category">카테고리</a>
+                                <ul class="sub_menu">
+                                    <li>
+                                        <div class="sub_menu_title">드로잉</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">인체</a></li>
+                                            <li><a href="#">캐릭터</a></li>
+                                            <li><a href="#">컨셉아트</a></li>
+                                            <li><a href="#">배경</a></li>
+                                            <li><a href="#">만화/웹툰</a></li>
+                                            <li><a href="#">애니/3D</a></li>
+                                            <li><a href="#">아이패드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">공예</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">소품제작</a></li>
+                                            <li><a href="#">뜨개질</a></li>
+                                            <li><a href="#">레진 공예</a></li>
+                                            <li><a href="#">가죽 공예</a></li>
+                                            <li><a href="#">기타 공예</a></li>
+                                            <li><a href="#">자수</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">디자인</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">그래픽</a></li>
+                                            <li><a href="#">브랜드</a></li>
+                                            <li><a href="#">UX/UI</a></li>
+                                            <li><a href="#">웹/코딩</a></li>
+                                            <li><a href="#">인테리어</a></li>
+                                            <li><a href="#">제품</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">사진 · 영상</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">영상편집</a></li>
+                                            <li><a href="#">2D</a></li>
+                                            <li><a href="#">3D</a></li>
+                                            <li><a href="#">VFX</a></li>
+                                            <li><a href="#">블렌더</a></li>
+                                            <li><a href="#">애니메이션</a></li>
+                                            <li><a href="#">릴레이</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">요리</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">베이킹</a></li>
+                                            <li><a href="#">카페푸드</a></li>
+                                            <li><a href="#">요식업</a></li>
+                                            <li><a href="#">레시피</a></li>
+                                            <li><a href="#">음료</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">게임</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">게임제작</a></li>
+                                            <li><a href="#">캐릭터제작</a></li>
+                                            <li><a href="#">배경제작</a></li>
+                                            <li><a href="#">게임기획</a></li>
+                                            <li><a href="#">FX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">프로그래밍</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">앱/웹 개발</a></li>
+                                            <li><a href="#">프론트엔드</a></li>
+                                            <li><a href="#">백엔드</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">교육</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">자격증</a></li>
+                                            <li><a href="#">독서</a></li>
+                                            <li><a href="#">글쓰기</a></li>
+                                            <li><a href="#">유아</a></li>
+                                            <li><a href="#">초등</a></li>
+                                            <li><a href="#">중고등</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">외국어</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">토익</a></li>
+                                            <li><a href="#">영어</a></li>
+                                            <li><a href="#">회화</a></li>
+                                            <li><a href="#">중국어</a></li>
+                                            <li><a href="#">일본어</a></li>
+                                            <li><a href="#">기타외국어</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">라이프 스타일</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">뷰티</a></li>
+                                            <li><a href="#">인테리어</a></li>
+                                            <li><a href="#">스타일링</a></li>
+                                            <li><a href="#">타로/사주/운세</a></li>
+                                            <li><a href="#">힐링</a></li>
+                                            <li><a href="#">소통</a></li>
+                                            <li><a href="#">심리</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">음악</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">작곡</a></li>
+                                            <li><a href="#">보컬</a></li>
+                                            <li><a href="#">피아노</a></li>
+                                            <li><a href="#">기타 악기</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">운동</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">체형교정</a></li>
+                                            <li><a href="#">다이어트</a></li>
+                                            <li><a href="#">홈트레이닝</a></li>
+                                            <li><a href="#">필라테스</a></li>
+                                            <li><a href="#">요가</a></li>
+                                            <li><a href="#">정신건강</a></li>
+                                            <li><a href="#">식단관리</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="sub_menu_title">금융 · 재테크</div>
+                                        <ul class="sub_menu_2">
+                                            <li><a href="#">블로그</a></li>
+                                            <li><a href="#">인스타그램</a></li>
+                                            <li><a href="#">기타 SNS</a></li>
+                                            <li><a href="#">부동산</a></li>
+                                            <li><a href="#">투자</a></li>
+                                            <li><a href="#">부업</a></li>
+                                            <li><a href="#">디지털노마드</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">구독권</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <div class="border"></div>
+<!-- ----------------------------------------------------------------------- -->
+        <section class="main_menu_wrapper">
+            <nav class="main_menu">
+                <ul class="main_menu_content">
+                    <li class="always_active">
+                        <a href="#">홈</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu_category">카테고리</a>
+                        <ul class="sub_menu">
+                            <li>
+                                <div class="sub_menu_title">드로잉</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">인체</a></li>
+                                    <li><a href="#">캐릭터</a></li>
+                                    <li><a href="#">컨셉아트</a></li>
+                                    <li><a href="#">배경</a></li>
+                                    <li><a href="#">만화/웹툰</a></li>
+                                    <li><a href="#">애니/3D</a></li>
+                                    <li><a href="#">아이패드</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">공예</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">소품제작</a></li>
+                                    <li><a href="#">뜨개질</a></li>
+                                    <li><a href="#">레진 공예</a></li>
+                                    <li><a href="#">가죽 공예</a></li>
+                                    <li><a href="#">기타 공예</a></li>
+                                    <li><a href="#">자수수</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">디자인</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">그래픽</a></li>
+                                    <li><a href="#">브랜드</a></li>
+                                    <li><a href="#">UX/UI</a></li>
+                                    <li><a href="#">웹/코딩</a></li>
+                                    <li><a href="#">인테리어</a></li>
+                                    <li><a href="#">제품</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">사진 · 영상</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">영상편집</a></li>
+                                    <li><a href="#">2D</a></li>
+                                    <li><a href="#">3D</a></li>
+                                    <li><a href="#">VFX</a></li>
+                                    <li><a href="#">블렌더</a></li>
+                                    <li><a href="#">애니메이션</a></li>
+                                    <li><a href="#">릴레이</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">요리</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">베이킹</a></li>
+                                    <li><a href="#">카페푸드</a></li>
+                                    <li><a href="#">요식업</a></li>
+                                    <li><a href="#">레시피</a></li>
+                                    <li><a href="#">음료</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">게임</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">게임제작</a></li>
+                                    <li><a href="#">캐릭터제작</a></li>
+                                    <li><a href="#">배경제작</a></li>
+                                    <li><a href="#">게임기획</a></li>
+                                    <li><a href="#">FX</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">프로그래밍</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">앱/웹 개발</a></li>
+                                    <li><a href="#">프론트엔드</a></li>
+                                    <li><a href="#">백엔드</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">교육</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">자격증</a></li>
+                                    <li><a href="#">독서</a></li>
+                                    <li><a href="#">글쓰기</a></li>
+                                    <li><a href="#">유아</a></li>
+                                    <li><a href="#">초등</a></li>
+                                    <li><a href="#">중고등</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">외국어</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">토익</a></li>
+                                    <li><a href="#">영어</a></li>
+                                    <li><a href="#">회화</a></li>
+                                    <li><a href="#">중국어</a></li>
+                                    <li><a href="#">일본어</a></li>
+                                    <li><a href="#">기타외국어</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">라이프 스타일</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">뷰티</a></li>
+                                    <li><a href="#">인테리어</a></li>
+                                    <li><a href="#">스타일링</a></li>
+                                    <li><a href="#">타로/사주/운세</a></li>
+                                    <li><a href="#">힐링</a></li>
+                                    <li><a href="#">소통</a></li>
+                                    <li><a href="#">심리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">음악</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">작곡</a></li>
+                                    <li><a href="#">보컬</a></li>
+                                    <li><a href="#">피아노</a></li>
+                                    <li><a href="#">기타 악기</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">운동</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">체형교정</a></li>
+                                    <li><a href="#">다이어트</a></li>
+                                    <li><a href="#">홈트레이닝</a></li>
+                                    <li><a href="#">필라테스</a></li>
+                                    <li><a href="#">요가</a></li>
+                                    <li><a href="#">정신건강</a></li>
+                                    <li><a href="#">식단관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="sub_menu_title">금융 · 재테크</div>
+                                <ul class="sub_menu_2">
+                                    <li><a href="#">블로그</a></li>
+                                    <li><a href="#">인스타그램</a></li>
+                                    <li><a href="#">기타 SNS</a></li>
+                                    <li><a href="#">부동산</a></li>
+                                    <li><a href="#">투자</a></li>
+                                    <li><a href="#">부업</a></li>
+                                    <li><a href="#">디지털노마드</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">구독권</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+<!-- ----------------------------------------------------------------------- -->
+        <section class="main">
+            <div class="main_banner_container">
+                <div class="main_banner">
+                    <div class="banner_text">
+                        <div class="banner_t1" data-aos="fade-right" data-aos-delay="300" data-aos-duration="700">
+                            <span>원하는 강의만&nbsp;</span>
+                            <span><span class="dot">쏙</span><span class="dot">쏙&nbsp;</span></span>
+                            <span>골라듣는</span>
+                        </div>
+
+                        <div class="banner_title" data-aos="fade-right" data-aos-delay="700" data-aos-duration="700">
+                            <span>Daily</span>
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 0L20.058 11.3244L29.8744 5.12563L23.6756 14.942L35 17.5L23.6756 20.058L29.8744 29.8744L20.058 23.6756L17.5 35L14.942 23.6756L5.12563 29.8744L11.3244 20.058L0 17.5L11.3244 14.942L5.12563 5.12563L14.942 11.3244L17.5 0Z" fill="#41FF76"/>
+                            </svg>
+                            <span>Class</span>
+                        </div>
+
+                        <div class="m_banner_title" data-aos="fade-right" data-aos-delay="700" data-aos-duration="700">
+                            <span>Daily - Class</span>
+                        </div>
+
+                        <div class="banner_t2" data-aos="fade-right" data-aos-delay="1100" data-aos-duration="700">
+                            <span>하루에 하나씩, 매일매일 스펙업!</span>
+                            <span>관심있는 분야를 다양하게 배워볼 수 있는 데일리 클래스</span>
+                        </div>
+
+                        <div class="m_banner_t2" data-aos="fade-right" data-aos-delay="1100" data-aos-duration="700">
+                            <span>하루에 하나씩, 매일매일 스펙업!</span>
+                            <span>관심있는 분야를 깊게 배워볼까요?</span>
+                        </div>
+                    </div>
+
+                    <div class="banner_img" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="700">
+                        <img src="img/main_3D.png" alt="main">
+                    </div>
+                </div>
+
+                <div class="main_etc" data-aos="fade-down" data-aos-delay="2600" data-aos-duration="500">
+                    <div>더 많은 강의 둘러보기</div>
+                    
+                    <div>
+                        <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5566 0.868043L14.0002 13.882L26.4438 0.868046" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg> 
+                    </div>
+                </div>
+            </div>   
+        </section>
+<!-- ----------------------------------------------------------------------- -->
+        <section class="contents_1">
+            <div class="swiper-container recom_class_container">
+                <div class="contents_1_title">연정님을 위한 추천 클래스</div>
+                <div class="swiper-wrapper recom_class">
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_8.png" alt="Slide 1"/>
+                    <div class="recom_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                    <div class="recom_name">콕스</div>
+                  </div>
+
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_7.png" alt="Slide 2"/>
+                    <div class="recom_title">매혹적인 인물화, 아이패드로 감각적인 색감을 그려요</div>
+                    <div class="recom_name">Zipcy</div>
+                  </div>
+
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_6.jpg" alt="Slide 3"/>
+                    <div class="recom_title">블렌더로 쉽고 재미있게 만드는 나만의 3D 캐릭터</div>
+                    <div class="recom_name">신민정</div>
+                  </div>
+
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_4.jpg" alt="Slide 4"/>
+                    <div class="recom_title">포토샵으로도 할 수 있다! 원하는 스타일의 캐릭터를 그려요</div>
+                    <div class="recom_name">저미</div>
+                  </div>
+
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_5 - 복사본.jpg" alt="Slide 5"/>
+                    <div class="recom_title">쉽고 간단하게 하는 인물 묘사와 빛, 이거 하나로 완전 정복</div>
+                    <div class="recom_name">저미</div>
+                  </div>
+
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_9.png" alt="Slide 6"/>
+                    <div class="recom_title">생기있고 발랄하게, 클립스튜디오로 그리는 캐릭터 일러스트</div>
+                    <div class="recom_name">Dodam</div>
+                  </div>
+
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_1.png" alt="Slide 7"/>
+                    <div class="recom_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                    <div class="recom_name">콕스</div>
+                  </div>
+
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_2.png" alt="Slide 8"/>
+                    <div class="recom_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                    <div class="recom_name">콕스</div>
+                  </div>
+
+                  <div class="swiper-slide recom_class_slide">
+                    <img src="img/class_3.png" alt="Slide 9"/>
+                    <div class="recom_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                    <div class="recom_name">콕스</div>
+                  </div>
+                </div>
+              
+                <div class="swiper-button-prev recom_button"></div>
+                <div class="swiper-button-next recom_button"></div>
+            </div>
+        </section>
+<!-- ----------------------------------------------------------------------- -->
+        <section class="contents_2">
+            <div class="swiper-container best_class_container">
+                <div class="contents_2_title"><i class="fa-solid fa-crown"></i> BEST 클래스</div>
+                <div class="swiper-wrapper best_class">
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_8.png" alt="Slide 1"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">1</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                            <div class="best_name">콕스</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_6.jpg" alt="Slide 2"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">2</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">블렌더로 쉽고 재미있게 만드는 나만의 3D 캐릭터</div>
+                            <div class="best_name">신민정</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_9.png" alt="Slide 3"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">3</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">생기있고 발랄하게, 클립스튜디오로 그리는 캐릭터 일러스트</div>
+                            <div class="best_name">Dodam</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_7.png" alt="Slide 4"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">4</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">매혹적인 인물화, 아이패드로 감각적인 색감을 그려요</div>
+                            <div class="best_name">Zipcy</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_5 - 복사본.jpg" alt="Slide 5"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">5</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">쉽고 간단하게 하는 인물 묘사와 빛, 이거 하나로 완전 정복</div>
+                            <div class="best_name">저미</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_4.jpg" alt="Slide 6"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">6</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">포토샵으로도 할 수 있다! 원하는 스타일의 캐릭터를 그려요</div>
+                            <div class="best_name">저미</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_1.png" alt="Slide 7"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">7</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                            <div class="best_name">익명</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_2.png" alt="Slide 8"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">8</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                            <div class="best_name">익명</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide best_class_slide">
+                    <img src="img/class_3.png" alt="Slide 9"/>
+                    <div class="best_text">
+                        <div class="best_left">
+                            <div class="best_number">9</div>
+                        </div>
+                        <div class="best_right">
+                            <div class="best_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                            <div class="best_name">익명</div>
+                            <div class="best_review">
+                                <span>★</span>
+                                5.0&nbsp;
+                                <span>|</span>
+                                1.9만명 수강
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            
+                <div class="swiper-button-prev best_button"></div>
+                <div class="swiper-button-next best_button"></div>
+            </div>
+        </section>
+<!-- ----------------------------------------------------------------------- -->
+        <section class="event">
+            <div class="event_contents event_1">
+                <div class="event_left">
+                    <div class="event_title">출석체크! 잊지 않으셨나요? &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="event_text">매일 출석하면 디클래스 구독권을 받을 수 있어요.
+                        <br>스펙도 쌓고 행운의 주인공도 되어보세요!
+                    </div>
+                </div>
+                <div class="event_right">
+                    <img src="img/3D_calender.png" alt="출석체크">
+                </div>
+            </div>
+
+            <div class="event_contents event_2">
+                <div class="event_left">
+                    <div class="event_title">오프라인 클래스 절찬 예약중 &nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="event_text">온라인 클래스만 있는 줄 아셨다면 큰 오산!
+                        <br>지금 즉시 오프라인 클래스도 예약해보세요.
+                    </div>
+                </div>
+                <div class="event_right">
+                    <img src="img/3D_avatar.png" alt="출석체크">
+                </div>
+            </div>
+        </section>
+<!-- ----------------------------------------------------------------------- -->
+        <section class="my_class">
+            <div class="swiper-container my_class_container">
+                <div class="my_class_title">수강 중인 클래스</div>
+                <div class="swiper-wrapper my_class_contents">
+                    <div class="swiper-slide my_class_slide">
+                        <img src="img/class_8.png" alt="Slide 1"/>
+                        <div class="my_title">초보 그림러가 인기 작가가 되는 법, 콕스의 독학비법서</div>
+                        <div class="my_name">콕스</div>
+                    </div>
+    
+                    <div class="swiper-slide my_class_slide">
+                        <img src="img/class_4.jpg" alt="Slide 2"/>
+                        <div class="my_title">포토샵으로도 할 수 있다! 원하는 스타일의 캐릭터를 그려요</div>
+                        <div class="my_name">저미</div>
+                    </div>
+    
+                    <div class="swiper-slide my_class_slide">
+                        <img src="img/class_5 - 복사본.jpg" alt="Slide 3"/>
+                        <div class="my_title">쉽고 간단하게 하는 인물 묘사와 빛, 이거 하나로 완전 정복</div>
+                        <div class="my_name">저미</div>
+                    </div>
+    
+                    <div class="swiper-slide my_class_slide">
+                        <div class="my_class_more">
+                            더 배우고 싶다면?
+                            <div class="my_class_more_button">클래스 찾아보기</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- ----------------------------------------------------------------------- -->
+        <section class="marquee">
+            <div class="marquee_title">다른 분야를 찾으시나요?</div>
+            <div class="marquee_content marquee1">
+                <a href="#"><img src="img/3D_art.png" alt="공예">공예</a>
+                <a href="#"><img src="img/3D_music.png" alt="음악">음악</a>
+                <a href="#"><img src="img/3D_bank.png" alt="금융">금융 · 재테크</a>
+                <a href="#"><img src="img/3D_picture.png" alt="사진">사진 · 영상</a>
+                <a href="#"><img src="img/3D_cook.png" alt="요리">요리</a>
+                <a href="#"><img src="img/3D_Programming.png" alt="프로그래밍">프로그래밍</a>
+                <a href="#"><img src="img/3D_art.png" alt="공예">공예</a>
+                <a href="#"><img src="img/3D_music.png" alt="음악">음악</a>
+                <a href="#"><img src="img/3D_bank.png" alt="금융">금융 · 재테크</a>
+                <a href="#"><img src="img/3D_picture.png" alt="사진">사진 · 영상</a>
+                <a href="#"><img src="img/3D_cook.png" alt="요리">요리</a>
+                <a href="#"><img src="img/3D_Programming.png" alt="프로그래밍">프로그래밍</a>
+                <a href="#"><img src="img/3D_art.png" alt="공예">공예</a>
+                <a href="#"><img src="img/3D_music.png" alt="음악">음악</a>
+                <a href="#"><img src="img/3D_bank.png" alt="금융">금융 · 재테크</a>
+                <a href="#"><img src="img/3D_picture.png" alt="사진">사진 · 영상</a>
+                <a href="#"><img src="img/3D_cook.png" alt="요리">요리</a>
+                <a href="#"><img src="img/3D_Programming.png" alt="프로그래밍">프로그래밍</a>
+                <a href="#"><img src="img/3D_art.png" alt="공예">공예</a>
+                <a href="#"><img src="img/3D_music.png" alt="음악">음악</a>
+                <a href="#"><img src="img/3D_bank.png" alt="금융">금융 · 재테크</a>
+                <a href="#"><img src="img/3D_picture.png" alt="사진">사진 · 영상</a>
+                <a href="#"><img src="img/3D_cook.png" alt="요리">요리</a>
+                <a href="#"><img src="img/3D_Programming.png" alt="프로그래밍">프로그래밍</a>
+            </div>
+            <div class="marquee_content marquee2">
+                <a href="#"><img src="img/3D_lifestyle.png" alt="라이프 스타일">라이프 스타일</a>
+                <a href="#"><img src="img/3D_edu.png" alt="교육">교육</a>
+                <a href="#"><img src="img/3D_design.png" alt="디자인">디자인</a>
+                <a href="#"><img src="img/3D_drawing.png" alt="드로잉">드로잉</a>
+                <a href="#"><img src="img/3D_game.png" alt="게임">게임</a>
+                <a href="#"><img src="img/3D_languge.png" alt="외국어">외국어</a>
+                <a href="#"><img src="img/3D_lifestyle.png" alt="라이프 스타일">라이프 스타일</a>
+                <a href="#"><img src="img/3D_edu.png" alt="교육">교육</a>
+                <a href="#"><img src="img/3D_design.png" alt="디자인">디자인</a>
+                <a href="#"><img src="img/3D_drawing.png" alt="드로잉">드로잉</a>
+                <a href="#"><img src="img/3D_game.png" alt="게임">게임</a>
+                <a href="#"><img src="img/3D_languge.png" alt="외국어">외국어</a>
+                <a href="#"><img src="img/3D_lifestyle.png" alt="라이프 스타일">라이프 스타일</a>
+                <a href="#"><img src="img/3D_edu.png" alt="교육">교육</a>
+                <a href="#"><img src="img/3D_design.png" alt="디자인">디자인</a>
+                <a href="#"><img src="img/3D_drawing.png" alt="드로잉">드로잉</a>
+                <a href="#"><img src="img/3D_game.png" alt="게임">게임</a>
+                <a href="#"><img src="img/3D_languge.png" alt="외국어">외국어</a>
+                <a href="#"><img src="img/3D_lifestyle.png" alt="라이프 스타일">라이프 스타일</a>
+                <a href="#"><img src="img/3D_edu.png" alt="교육">교육</a>
+                <a href="#"><img src="img/3D_design.png" alt="디자인">디자인</a>
+                <a href="#"><img src="img/3D_drawing.png" alt="드로잉">드로잉</a>
+                <a href="#"><img src="img/3D_game.png" alt="게임">게임</a>
+                <a href="#"><img src="img/3D_languge.png" alt="외국어">외국어</a>
+                <a href="#"><img src="img/3D_lifestyle.png" alt="라이프 스타일">라이프 스타일</a>
+                <a href="#"><img src="img/3D_edu.png" alt="교육">교육</a>
+                <a href="#"><img src="img/3D_design.png" alt="디자인">디자인</a>
+                <a href="#"><img src="img/3D_drawing.png" alt="드로잉">드로잉</a>
+                <a href="#"><img src="img/3D_game.png" alt="게임">게임</a>
+                <a href="#"><img src="img/3D_languge.png" alt="외국어">외국어</a>
+            </div>
+        </section>
+<!-- ----------------------------------------------------------------------- -->
+        <footer class="footer">
+            <div class="footer_left">
+                <img src="img/footer_logo.png" alt="D.CLASS">
+            </div>
+
+            <div></div>
+
+            <div class="footer_middle">
+                <nav class="footer_menu">
+                    <a href="#">공지사항</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">국비지원</a>
+                    <a href="#">저작권침해 신고센터</a>
+                </nav>
+
+                <div class="footer_text">
+                    <div>주식회사 데일리클래스 | 대표 이연정</div>
+                    <div>대전광역시 중구 김밥로 319, 8138호(김밥로5가, 김밥타워)</div>
+                    <div>대표 전화 : 042-123-1234 | 이메일 : dyclass@naver.com</div>
+                    <div>사업자등록번호 : 319-03-81119 | 통신판매업 신고번호: 제 2024-대전중구-81119호</div>
+                </div>
+
+                <div class="footer_sns">
+                    <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+                    <a href="#"><img src="img/insta.png" alt="instagram"></a>
+                    <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                    <a href="#"><img src="img/X.png" alt="X_twitter"></a>
+                </div>
+
+                <div class="footer_copy">
+                    ⓒ 2024 Daily Class Company. All Rights Reserved.
+                </div>
+            </div>
+
+            <div class="footer_right">
+                <div class="footer_service">
+                    <p>고객센터</p>
+                    <p>오전 10시 ~ 오후 6기 (주말, 공휴일 제외)</p>
+                    <a href="#" class="footer_button">문의하기</a>
+                </div>
+
+                <div class="footer_download">
+                    <a href="#"><img src="img/수정_black_down_btn1.png" alt="Google Play"></a>
+                    <a href="#"><img src="img/수정_black_down_btn2.png" alt="App Store"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
